@@ -1,149 +1,113 @@
-<div align="center">
 
-<img src="https://raw.githubusercontent.com/google/adk-python/main/docs/assets/agent-development-kit.png" alt="Google ADK Logo" width="200"/>
+<p align="center">
+  <img src="assets/agent-development-kit.png" width="110" alt="Google ADK Logo"/>
+</p>
 
-# 💰 Finance Assistance Agent
+<h1 align="center">Finance Assistance Agent</h1>
 
-**Built with [Google Agent Development Kit (ADK)](https://github.com/google/adk-python)**
+<p align="center">
+  <em>An AI-powered finance assistant built on Google's Agent Development Kit</em>
+</p>
 
-[![Google ADK](https://img.shields.io/badge/Google-ADK-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/google/adk-python)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Dev.to Blog](https://img.shields.io/badge/Read%20My%20Blog-DEV.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/aditthyass/how-to-develop-an-agent-using-google-adk)
-
-</div>
-
----
-
-## 📖 About
-
-I built a **Finance Assistance Agent** using the **Google Agent Development Kit (ADK)** — Google's open-source framework for building, evaluating, and deploying AI agents with precision and flexibility.
-
-This agent is designed to answer your finance-related questions intelligently, powered by Gemini's pre-trained knowledge.
+<p align="center">
+  <a href="https://github.com/google/adk-python"><img src="https://img.shields.io/badge/Powered%20by-Google%20ADK-4285F4?style=flat-square&logo=google&logoColor=white"/></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10+-FFD43B?style=flat-square&logo=python&logoColor=blue"/></a>
+  <a href="https://dev.to/aditthyass/how-to-develop-an-agent-using-google-adk"><img src="https://img.shields.io/badge/Blog-Dev.to-0A0A0A?style=flat-square&logo=devdotto&logoColor=white"/></a>
+  <a href="https://github.com/AditthyaSS/Finance-Agent-Using-GoogleADK"><img src="https://img.shields.io/github/stars/AditthyaSS/Finance-Agent-Using-GoogleADK?style=flat-square&color=yellow"/></a>
+</p>
 
 ---
 
-## ✅ What It Can Do (Phase 1)
+## What is this?
 
-In this phase of development, the agent can:
+I built a **Finance Assistance Agent** using **Google ADK** — a framework by Google to build, run, and evaluate AI agents. Ask it anything about finance and it responds with structured, accurate answers using Gemini's pre-trained knowledge.
 
-- 💬 Answer **finance-related questions** based on its pre-trained knowledge
-- 📊 Explain concepts like **stocks, mutual funds, budgeting, savings, and investing**
-- 🧠 Provide general financial guidance and definitions
-- 🔁 Maintain a **conversational flow** through ADK's session management
-
-> **Note:** The agent currently answers based on **previously trained data only**. It does **not** have access to real-time information such as live market prices, current trends, or today's news.
+> **Phase 1** — The agent works with pre-trained knowledge. It cannot yet access live data like market prices or current trends. That's coming in Phase 2.
 
 ---
 
-## 🚧 Current Limitations
+## Agent in Action
 
-| Feature | Status |
-|---|---|
-| Pre-trained financial Q&A | ✅ Available |
-| Real-time market prices | ❌ Not yet available |
-| Current market trends | ❌ Not yet available |
-| Live stock/crypto data | ❌ Not yet available |
-| Latest financial news | ❌ Not yet available |
+<p align="center">
+  <img src="assets/output.png" alt="Finance Agent Output" width="900"/>
+</p>
+
+*The agent running in the ADK Web UI — answering a question about Fixed Deposits*
 
 ---
 
-## 🗺️ Roadmap — Phase 2 (Coming Soon)
+## Phase 1 — What's Working
 
-In the next phase of development, we plan to add:
+- ✅ Ask finance questions — *stocks, FDs, mutual funds, budgeting, savings*
+- ✅ Conversational memory within a session
+- ✅ Clean responses via ADK's Web UI
+- ✅ Runs locally with `adk web`
 
-- 📈 **Real-time market data** integration (stocks, crypto, forex)
-- 📰 **Live financial news** feed and trend analysis
-- 🔍 **Web search tool** for up-to-date information
-- 📉 **Portfolio tracking** and insights
-- 🌐 **Multi-tool agent** with API integrations
+## Phase 2 — What's Coming
+
+- 🔜 Live stock & crypto prices
+- � Real-time market trend analysis
+- � Financial news integration
+- � Web search tool support
+- � Portfolio Q&A
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.10+
-- Google ADK installed
-- A valid **Gemini API Key**
-
-### Installation
+## Run It Yourself
 
 ```bash
-# Clone the repository
+# 1. Clone the repo
 git clone https://github.com/AditthyaSS/Finance-Agent-Using-GoogleADK.git
 cd Finance-Agent-Using-GoogleADK
 
-# Create and activate virtual environment
+# 2. Set up virtual environment
 python -m venv .venv
-.venv\Scripts\activate   # Windows
-# source .venv/bin/activate  # macOS/Linux
+.venv\Scripts\activate       # Windows
+# source .venv/bin/activate  # macOS / Linux
 
-# Install dependencies
+# 3. Install dependencies
 pip install -r requirements.txt
-```
 
-### Configuration
+# 4. Add your API key
+echo GOOGLE_API_KEY=your_key_here > .env
 
-Create a `.env` file in the root directory:
-
-```env
-GOOGLE_API_KEY=your_gemini_api_key_here
-```
-
-### Running the Agent
-
-```bash
-adk run finance_ass_agent
-```
-
-Or launch the interactive ADK web UI:
-
-```bash
+# 5. Launch the agent
 adk web
 ```
 
+Then open your browser at `http://localhost:8000` and start chatting.
+
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Finance-Agent-Using-GoogleADK/
+│
+├── assets/
+│   ├── agent-development-kit.png   ← ADK logo
+│   └── output.png                  ← Agent screenshot
+│
 ├── finance_ass_agent/
-│   ├── __init__.py       # Package entry point
-│   └── agent.py          # Agent definition
-├── requirements.txt       # Python dependencies
-├── .env                   # API keys (not committed)
-├── .gitignore
+│   ├── __init__.py
+│   └── agent.py                    ← Agent definition
+│
+├── requirements.txt
+├── .env                            ← Your API key (not committed)
 └── README.md
 ```
 
 ---
 
-## 📝 Blog
+## Read the Blog
 
-Want to learn how I built this? Read my full step-by-step guide on Dev.to:
+Full step-by-step breakdown of how I built this agent from scratch — including agent setup, tool configuration, and running it locally.
 
-👉 **[How to Develop an Agent Using Google ADK](https://dev.to/aditthyass/how-to-develop-an-agent-using-google-adk)**
-
----
-
-## 🛠️ Built With
-
-- [Google ADK (Agent Development Kit)](https://github.com/google/adk-python) — Agent framework by Google
-- [Gemini API](https://ai.google.dev/) — Google's multimodal AI model
-- Python 3.10+
+**[→ How to Develop an Agent Using Google ADK](https://dev.to/aditthyass/how-to-develop-an-agent-using-google-adk)** on Dev.to
 
 ---
 
-## 👨‍💻 Author
-
-**Aditthya SS**
-- Dev.to: [@aditthyass](https://dev.to/aditthyass)
-- GitHub: [@AditthyaSS](https://github.com/AditthyaSS)
-
----
-
-<div align="center">
-  <sub>⭐ If you found this helpful, consider giving a star to the repo!</sub>
-</div>
+<p align="center">
+  Made by <a href="https://github.com/AditthyaSS">Aditthya SS</a> &nbsp;·&nbsp;
+  <a href="https://dev.to/aditthyass">Dev.to</a>
+</p>
