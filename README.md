@@ -20,9 +20,7 @@
 
 ## What is this?
 
-I built a **Finance Assistance Agent** using **Google ADK** — a framework by Google to build, run, and evaluate AI agents. Ask it anything about finance and it responds with structured, accurate answers using Gemini's knowledge — now enhanced with **Google Search** for real-time web results.
-
-> **Phase 2 in progress** — The agent can now search the web using Google Search to fetch up-to-date financial information, news, and market context beyond its pre-trained knowledge.
+I built a **Finance Assistance Agent** using **Google ADK** — a framework by Google to build, run, and evaluate AI agents. Ask it anything about finance and it responds with structured, accurate answers using Gemini's knowledge — now enhanced with **Google Search** for real-time web results. The agent can now search the web using Google Search to fetch up-to-date financial information, news, and market context beyond its pre-trained knowledge.
 
 ---
 
