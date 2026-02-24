@@ -20,9 +20,9 @@
 
 ## What is this?
 
-I built a **Finance Assistance Agent** using **Google ADK** — a framework by Google to build, run, and evaluate AI agents. Ask it anything about finance and it responds with structured, accurate answers using Gemini's pre-trained knowledge.
+I built a **Finance Assistance Agent** using **Google ADK** — a framework by Google to build, run, and evaluate AI agents. Ask it anything about finance and it responds with structured, accurate answers using Gemini's knowledge — now enhanced with **Google Search** for real-time web results.
 
-> **Phase 1** — The agent works with pre-trained knowledge. It cannot yet access live data like market prices or current trends. That's coming in Phase 2.
+> **Phase 2 in progress** — The agent can now search the web using Google Search to fetch up-to-date financial information, news, and market context beyond its pre-trained knowledge.
 
 ---
 
@@ -36,20 +36,20 @@ I built a **Finance Assistance Agent** using **Google ADK** — a framework by G
 
 ---
 
-## Phase 1 — What's Working
+## What's Working
 
 - ✅ Ask finance questions — *stocks, FDs, mutual funds, budgeting, savings*
 - ✅ Conversational memory within a session
 - ✅ Clean responses via ADK's Web UI
 - ✅ Runs locally with `adk web`
+- ✅ **Google Search integration** — real-time web search for up-to-date financial info
 
-## Phase 2 — What's Coming
+## What's Coming
 
-- 🔜 Live stock & crypto prices
-- � Real-time market trend analysis
-- � Financial news integration
-- � Web search tool support
-- � Portfolio Q&A
+- 🔜 Live stock & crypto prices via dedicated APIs
+- 🔜 Real-time market trend analysis
+- 🔜 Financial news feed integration
+- 🔜 Portfolio Q&A
 
 ---
 
